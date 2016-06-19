@@ -7,17 +7,11 @@
 
     "browser_action": {
         "default_icon": "64x64.png"
-            //"default_popup": "popup.html"
     },
     "background": {
         "scripts": ["background.js"],
         "persistent": false
     },
-    "content_scripts": [{
-        "matches": ["http://*/*", "https://*/*"],
-        "css": ["style.css"],
-        "js": ["jquery-3.0.0.min.js", "popup.js"]
-    }],
     "icons": {
         "16": "16x16.png",
         "32": "32x32.png",
@@ -27,9 +21,5 @@
     "chrome_url_overrides": {
         "newtab": "tabContent.html"
     },
-    "web_accessible_resources": [
-        "toolbar.html",
-        "style.css"
-    ],
     "incognito": "split"
 }
